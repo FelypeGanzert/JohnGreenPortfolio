@@ -1,0 +1,211 @@
+@import 'reset';
+@import 'variables';
+@import 'utilites';
+
+// Navbar
+nav#main-nav {
+    height: 100vh;
+    min-height: 500px;
+    background: url("../img/john-showcase.jpg") no-repeat left center /cover;
+    color: $light-color;
+    text-shadow: $dark-color 2px 2px 2px;
+    
+    // Main Menu
+    div#main-menu{
+        width: 100%;
+        padding: 10px 30px;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        ul{
+            display: flex;
+            justify-content: flex-end;;
+        }
+        li{
+            display: block;
+            padding: 15px;
+            margin: 0px 5px;
+        }
+        a{
+            display: inline-block;
+            padding: 5px;
+            color: $light-color;
+            position: relative;
+            &:before {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 4px;
+                background: $primary-color;
+                transform: scale(0);
+                transition: transform 0.3s ease-in-out;
+            }
+            &:hover:before {
+                transform: scale(1);
+            }
+            &.current{
+                &:before {
+                    background: $light-color;
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+
+    //Main description
+    div#description{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        div{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            font-size: 3.5rem;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+        .btn{
+            text-shadow: none;
+            transition: background 0.4s ease-in-out;
+            &:hover{
+                background: $primary-color;
+            }
+        }
+    }
+}
+
+
+//Section Resumo
+section#resume{
+    padding: 50px 0px;
+    text-align: center;
+    a{
+        text-decoration: underline;
+        text-decoration-color: $primary-color;
+        &:hover{
+            color: $secondary-color;
+        }
+    }
+    div#activities{
+        margin: 15px 0px;
+        display: flex;
+        i{
+            font-size: 50px;
+            margin-bottom: 15px;
+            color: $primary-color;
+            transition: transform 0.4s ease-in-out;
+        }
+        div{
+            flex: 1;
+            padding: 15px;
+            &:hover i{
+                transform: scale(1.4);
+            }
+        }
+    }
+
+    div#works{
+        margin: 15px 0px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        i{
+            font-size: 50px;
+            margin-bottom: 15px;
+            color: $dark-color;
+            transition: transform 0.4s ease-in-out;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            &:nth-child(odd){
+                background: darken($light-color, 10%);
+                &:hover i{
+                    transform: rotate(15deg);
+                }
+            }
+            &:nth-child(even){
+                background: darken($light-color, 25%);
+                &:hover i{
+                    transform: rotate(15deg);
+                }
+            }
+            span.work{
+                font-size: 1.2rem;
+                
+            }
+            p{
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+section#dftba{
+    text-align: center;
+}
+section#quote{
+    margin-top: 30px;
+    display: flex;
+    height: 400px;
+    font-size: 1.2rem;
+    div{
+        padding: 20px 50px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &.image {
+            overflow: hidden;
+            padding: 0;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.4s ease-in-out;
+                &:hover{
+                    transform: scale(1.3);
+                }
+            }
+        }
+    }
+    .book-name{
+        align-self: flex-end;
+        font-size: 1rem;
+        color: lighten($dark-color, 10%)
+    }
+}
+
+footer#main-footer {
+    padding: 10px 20px;
+    background: $dark-color;
+    color: $light-color;
+    div.container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul#social-links{
+        display: flex;
+        li{
+            padding: 5px 15px;
+        }
+    }
+    a{
+        color: $light-color;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+    i{
+        font-size: 25px;
+    }
+}
