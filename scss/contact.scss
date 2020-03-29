@@ -1,0 +1,73 @@
+@import 'variables';
+
+nav#main-nav {
+    min-height: auto;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+section#contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 100%;
+        max-width: 960px;
+        padding: 20px 30px;
+    }
+    input, textarea{
+        display: block;
+        padding: 10px 15px;
+        width: 100%;
+    }
+    textarea{
+        grid-column: 1 / span 2;
+        height: 100px;
+    }
+    input#btn-submit{
+        grid-column: 1 / span 2;
+        background: $dark-color;
+        color: $light-color;
+        border: none;
+        transition: background 0.4s ease-in-out;
+        cursor: pointer;
+        &:hover{
+            background: lighten($dark-color, 5%);
+        }
+    }
+}
+
+section#contact-ways{
+    display: flex;
+    background: $dark-color;
+    color: $light-color;
+    align-items: center;
+    justify-content: space-around;
+    div{
+        padding: 20px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        i{
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        .way{
+            display: block;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+section#invite{
+    padding: 30px;
+    font-size: 2rem;
+    text-align: center;
+    background: $primary-color;
+    color: $light-color;
+    text-shadow: $dark-color 1px 1px 2px;
+}

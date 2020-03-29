@@ -1,0 +1,102 @@
+@import 'variables';
+
+nav#main-nav {
+    min-height: auto;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+// About Section
+
+section{
+    padding: 50px 0px;
+}
+section#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & > div{
+        display: flex;
+        align-items: center;
+        padding: 0px 20px;
+        min-height: 400px;
+        div{
+            padding: 20px 30px;
+            flex: 1;
+        }
+        div#profile-image{
+            overflow: hidden;
+            padding: 0;
+            max-height: 350px;
+            max-width: 450px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease-in-out;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+        div#text{
+            background: darken($light-color, 5%);
+            margin: 0px 25px;
+            border-left: 4px $primary-color solid;
+        }
+    }
+}
+
+section#events{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div#time-line{
+        position: relative;
+        width: 5px;
+        background: $dark-color;
+        div{
+            width: 400px;
+            padding: 15px 20px;
+            margin: 20px 0px;
+            position: relative;
+            background: lighten($dark-color, 10%);
+            color: $light-color;
+            a{
+                color: $primary-color;
+                &:hover{
+                    color: $secondary-color;
+                }
+            }
+            &:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                transform: translateY(50%);
+                border-style: solid;
+                border-width: 30px 20px;
+            }
+            &:nth-child(odd){
+                transform: translateX(calc(-110%));
+                &:before{
+                    right: -40px;
+                    border-color: transparent transparent transparent $dark-color;
+                }
+            }
+            &:nth-child(even){
+                transform: translateX(calc(10%));
+                &:before{
+                    left: -40px;
+                    border-color: transparent $dark-color transparent transparent;
+                }
+            }
+        }
+        span.year{
+            display: block;
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 1.6rem;
+        }
+    }
+}
