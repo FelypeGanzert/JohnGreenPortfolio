@@ -63,6 +63,9 @@ nav#main-nav {
     text-transform: uppercase;
     font-size: 1.2rem; }
     nav#main-nav div#main-menu ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
       display: flex;
       justify-content: flex-end; }
     nav#main-nav div#main-menu li {
@@ -92,9 +95,15 @@ nav#main-nav {
   nav#main-nav div#description {
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex; }
     nav#main-nav div#description div {
       flex: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -119,6 +128,9 @@ section#resume {
       color: #FF5607; }
   section#resume div#activities {
     margin: 15px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex; }
     section#resume div#activities i {
       font-size: 50px;
@@ -132,6 +144,7 @@ section#resume {
         transform: scale(1.4); }
   section#resume div#works {
     margin: 15px 0px;
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(4, 1fr); }
     section#resume div#works i {
@@ -140,6 +153,9 @@ section#resume {
       color: #333;
       transition: transform 0.4s ease-in-out; }
     section#resume div#works div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
       display: flex;
       flex-direction: column;
       padding: 15px; }
@@ -161,12 +177,19 @@ section#dftba {
 
 section#quote {
   margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   height: 400px;
   font-size: 1.2rem; }
   section#quote div {
     padding: 20px 50px;
-    flex: 1;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -191,10 +214,16 @@ footer#main-footer {
   background: #333;
   color: #fff; }
   footer#main-footer div.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     justify-content: space-between;
     align-items: center; }
   footer#main-footer ul#social-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex; }
     footer#main-footer ul#social-links li {
       padding: 5px 15px; }

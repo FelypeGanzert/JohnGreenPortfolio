@@ -33,3 +33,23 @@
     max-width: 960px;
     margin: auto;
 }
+
+
+@mixin display-flex(){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin display-grid(){
+    display: -ms-grid;
+    display: grid;
+}
+
+
+@mixin transform($property){
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}

@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'utilites';
 
 nav#main-nav {
     min-height: auto;
@@ -12,22 +13,25 @@ section{
     padding: 50px 0px;
 }
 section#about {
-    display: flex;
+    @include display-flex();
     flex-direction: column;
     align-items: center;
 
     & > div{
-        display: flex;
+        @include display-flex();
         align-items: center;
         padding: 0px 20px;
         min-height: 400px;
+        max-width: 100%;
         div{
             padding: 20px 30px;
-            flex: 1;
+            flex: 1 a auto;
         }
         div#profile-image{
             overflow: hidden;
             padding: 0;
+            min-height: 350px;
+            min-width: 450px;
             max-height: 350px;
             max-width: 450px;
             img{
@@ -49,7 +53,7 @@ section#about {
 }
 
 section#events{
-    display: flex;
+    @include display-flex();
     flex-direction: column;
     align-items: center;
     div#time-line{
@@ -78,14 +82,14 @@ section#events{
                 border-width: 30px 20px;
             }
             &:nth-child(odd){
-                transform: translateX(calc(-110%));
+                @include transform(translateX(-440px));
                 &:before{
                     right: -40px;
                     border-color: transparent transparent transparent $dark-color;
                 }
             }
             &:nth-child(even){
-                transform: translateX(calc(10%));
+                @include transform(translateX(40px));
                 &:before{
                     left: -40px;
                     border-color: transparent $dark-color transparent transparent;

@@ -1,3 +1,32 @@
+.btn {
+  display: inline-block;
+  padding: 15px 20px; }
+  .btn-light {
+    background: #fff;
+    color: #333; }
+  .btn-dark {
+    background: #333;
+    color: #fff; }
+
+.l-heading {
+  font-size: 2rem;
+  padding: 5px;
+  position: relative;
+  display: inline-block; }
+  .l-heading:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 50%;
+    height: 3px;
+    transform: translateX(50%);
+    background: #FFC100; }
+
+.container {
+  max-width: 960px;
+  margin: auto; }
+
 nav#main-nav {
   min-height: auto;
   height: auto;
@@ -8,6 +37,7 @@ section#books {
   flex-direction: column;
   align-items: center; }
   section#books div#books-grid {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
@@ -37,6 +67,7 @@ section#quotes {
     text-align: right;
     color: #999; }
   section#quotes div.reviews {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px; }
