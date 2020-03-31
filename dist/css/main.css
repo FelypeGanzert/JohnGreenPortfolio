@@ -51,12 +51,27 @@ img {
   max-width: 960px;
   margin: auto; }
 
+.writer {
+  border-right: #f7f7f7 5px solid;
+  display: inline-block;
+  padding-right: 5px;
+  animation: color-border 0.5s ease-in-out  infinite; }
+
+@keyframes color-border {
+  from {
+    border-color: #f7f7f7; }
+  to {
+    border-color: transparent; } }
+
 nav#main-nav {
   height: 100vh;
   min-height: 500px;
   background: url("../img/john-showcase.jpg") no-repeat left center/cover;
   color: #fff;
-  text-shadow: #333 2px 2px 2px; }
+  text-shadow: #333 2px 2px 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
   nav#main-nav div#main-menu {
     width: 100%;
     padding: 10px 30px;
@@ -93,14 +108,13 @@ nav#main-nav {
         background: #fff;
         transform: scale(1); }
   nav#main-nav div#description {
-    width: 100%;
+    padding: 10px 30px;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex; }
     nav#main-nav div#description div {
-      flex: 1;
       display: -webkit-box;
       display: -ms-flexbox;
       display: -webkit-flex;
@@ -109,7 +123,8 @@ nav#main-nav {
       align-items: center;
       justify-content: center; }
     nav#main-nav div#description h1 {
-      font-size: 3.5rem; }
+      font-size: 3.2rem;
+      line-height: 1.2; }
     nav#main-nav div#description p {
       font-size: 1.5rem; }
     nav#main-nav div#description .btn {
