@@ -24,7 +24,7 @@ class TypeWriter{
         }
 
         // Define the speed of the writer
-        let typeSpeed = 300;
+        let typeSpeed = 200;
         if(this.deleting){
             typeSpeed /= 2;
         }
