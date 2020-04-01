@@ -1,0 +1,266 @@
+@import 'variables';
+
+// Tablets
+@media (max-width: 980px) {
+
+    // Main Page
+    nav#main-nav {
+        div#description{
+            padding: 10px 15px;
+            h1{
+                font-size: 2.7rem;
+            }
+        }
+    }
+    
+    // Main Page - quote
+    section#quote{
+        div{
+            padding: 20px 15px;
+            &.image {
+                img{
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+    
+   // About Page
+    section#about > div{
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+        div#profile-image {
+            min-width: 400px;
+            max-width: 400px;
+            min-height: auto;
+            margin-bottom: 15px;
+        }
+    }
+    // About - Events
+    section#events {
+        div#time-line{
+            div{
+                width: 40vw;
+                &:nth-child(odd){
+                    transform: translateX(calc(-40vw - 40px));
+                }
+            }
+        }
+    }
+
+    // Books Page
+    section#books{
+        div#books-grid{
+            grid-template-columns: repeat(3, 1fr);
+            div{
+                height: 250px;
+            }
+        }
+    }
+    // Books quotes
+    section#quotes{
+        div.reviews{
+            display: block;
+            & > div{
+                margin: 15px 10px;
+            }
+        }
+    }
+
+}
+
+// Smartphones
+@media (max-width: 650px){
+    
+    p{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    // Main Page
+    nav#main-nav {
+         // Main Menu
+         div#main-menu{
+            padding: 10px 15px;
+            font-size: 1rem;
+            width: 100%;
+            ul{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            li{
+                display: block;
+                padding: 0;
+            }
+            a{
+                display: inline-block;
+                padding: 2px;
+            }
+        }
+         
+        div#description{
+            padding: 10px 15px;
+            h1{
+                font-size: 1.4rem;
+            }
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+
+    section#resume{
+        div#activities{
+            display: block;
+            div{ 
+                i{
+                    font-size: 30px;
+                }
+                padding-top: 30px;
+                border-bottom: #999 solid 1px;
+            }
+        }
+        div#works{
+            grid-template-columns: repeat(2, 1fr); 
+            div{
+                &:nth-child(even){
+                    background: darken($light-color, 10%);
+                }
+                &:nth-child(3n + 1){
+                    background: darken($light-color, 25%);
+                }
+                i{
+                    font-size: 30px;
+                }
+                span.work{
+                    font-size: 1rem;
+                }
+                p{
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    // Main Page = quote
+    section#quote{
+        flex-direction: column;
+        div{
+            padding: 20px 15px;
+            &.image {
+                img{
+                    min-height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    // Footer
+    footer#main-footer{
+        div.container{
+            flex-direction: column;
+            a{
+                text-decoration: underline;
+            }
+        }
+    }
+
+
+    // About Page
+    section#about{
+        padding-top: 10px;
+        & > div{
+            div#profile-image {
+                min-width: 90%;
+                max-width: 90%;
+                min-height: 200px;
+                max-height: 200px;
+                margin-bottom: 15px;
+            }
+            div#text{
+                margin: 0px;
+                width: 100%;
+                padding: 10px 5px;
+                border-left: 4px $primary-color solid;
+            }
+        }
+        
+    }
+    // About - Events
+    section#events {
+        padding-top: 10px;
+        div#time-line{
+            position: relative;
+            width: 100%;
+            background: $dark-color;
+            div{
+                width: 100%;
+                position: initial;
+                transform: none !important;
+            }
+        }
+    }
+
+     // Books Page
+     section#books{
+        div#books-grid{
+            grid-template-columns: repeat(2, 1fr);
+            div{
+                height: 200px;
+            }
+        }
+    }
+    // Books quotes
+    section#quotes{
+        div.reviews{
+            display: block;
+            & > div{
+                flex-direction: column;
+                margin: 15px 0px;
+                p{
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+
+    // Contact Page
+    section#contact{
+        form{
+            padding: 20px;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            input, textarea{
+                grid-column: 1;
+            }
+        }
+    }
+
+    // Contact Ways
+    section#contact-ways{
+        flex-direction: column;
+        div{
+            width: 100%;
+            padding: 15px 10px;
+            border-bottom: 1px dotted #999;
+            i{
+                font-size: 30px;
+            }
+            .way{
+                font-size: 1rem;
+            }
+        }
+    }
+
+    // Section invite - Contact Page
+    section#invite{
+        font-size: 1.5em;
+        line-height: 1.2;
+    }
+
+
+}

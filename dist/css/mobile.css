@@ -1,0 +1,139 @@
+@media (max-width: 980px) {
+  nav#main-nav div#description {
+    padding: 10px 15px; }
+    nav#main-nav div#description h1 {
+      font-size: 2.7rem; }
+  section#quote div {
+    padding: 20px 15px; }
+    section#quote div.image img {
+      object-fit: contain; }
+  section#about > div {
+    display: flex;
+    flex-direction: column;
+    min-height: auto; }
+    section#about > div div#profile-image {
+      min-width: 400px;
+      max-width: 400px;
+      min-height: auto;
+      margin-bottom: 15px; }
+  section#events div#time-line div {
+    width: 40vw; }
+    section#events div#time-line div:nth-child(odd) {
+      transform: translateX(calc(-40vw - 40px)); }
+  section#books div#books-grid {
+    grid-template-columns: repeat(3, 1fr); }
+    section#books div#books-grid div {
+      height: 250px; }
+  section#quotes div.reviews {
+    display: block; }
+    section#quotes div.reviews > div {
+      margin: 15px 10px; } }
+
+@media (max-width: 650px) {
+  p {
+    padding-left: 15px;
+    padding-right: 15px; }
+  nav#main-nav div#main-menu {
+    padding: 10px 15px;
+    font-size: 1rem;
+    width: 100%; }
+    nav#main-nav div#main-menu ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px; }
+    nav#main-nav div#main-menu li {
+      display: block;
+      padding: 0; }
+    nav#main-nav div#main-menu a {
+      display: inline-block;
+      padding: 2px; }
+  nav#main-nav div#description {
+    padding: 10px 15px; }
+    nav#main-nav div#description h1 {
+      font-size: 1.4rem; }
+    nav#main-nav div#description p {
+      font-size: 1rem; }
+  section#resume div#activities {
+    display: block; }
+    section#resume div#activities div {
+      padding-top: 30px;
+      border-bottom: #999 solid 1px; }
+      section#resume div#activities div i {
+        font-size: 30px; }
+  section#resume div#works {
+    grid-template-columns: repeat(2, 1fr); }
+    section#resume div#works div:nth-child(even) {
+      background: #e6e6e6; }
+    section#resume div#works div:nth-child(3n + 1) {
+      background: #bfbfbf; }
+    section#resume div#works div i {
+      font-size: 30px; }
+    section#resume div#works div span.work {
+      font-size: 1rem; }
+    section#resume div#works div p {
+      font-size: 1.2rem;
+      font-weight: bold; }
+  section#quote {
+    flex-direction: column; }
+    section#quote div {
+      padding: 20px 15px; }
+      section#quote div.image img {
+        min-height: 100%;
+        object-fit: cover; }
+  footer#main-footer div.container {
+    flex-direction: column; }
+    footer#main-footer div.container a {
+      text-decoration: underline; }
+  section#about {
+    padding-top: 10px; }
+    section#about > div div#profile-image {
+      min-width: 90%;
+      max-width: 90%;
+      min-height: 200px;
+      max-height: 200px;
+      margin-bottom: 15px; }
+    section#about > div div#text {
+      margin: 0px;
+      width: 100%;
+      padding: 10px 5px;
+      border-left: 4px #FFC100 solid; }
+  section#events {
+    padding-top: 10px; }
+    section#events div#time-line {
+      position: relative;
+      width: 100%;
+      background: #333; }
+      section#events div#time-line div {
+        width: 100%;
+        position: initial;
+        transform: none !important; }
+  section#books div#books-grid {
+    grid-template-columns: repeat(2, 1fr); }
+    section#books div#books-grid div {
+      height: 200px; }
+  section#quotes div.reviews {
+    display: block; }
+    section#quotes div.reviews > div {
+      flex-direction: column;
+      margin: 15px 0px; }
+      section#quotes div.reviews > div p {
+        padding: 0; }
+  section#contact form {
+    padding: 20px;
+    grid-template-columns: 1fr;
+    gap: 10px; }
+    section#contact form input, section#contact form textarea {
+      grid-column: 1; }
+  section#contact-ways {
+    flex-direction: column; }
+    section#contact-ways div {
+      width: 100%;
+      padding: 15px 10px;
+      border-bottom: 1px dotted #999; }
+      section#contact-ways div i {
+        font-size: 30px; }
+      section#contact-ways div .way {
+        font-size: 1rem; }
+  section#invite {
+    font-size: 1.5em;
+    line-height: 1.2; } }

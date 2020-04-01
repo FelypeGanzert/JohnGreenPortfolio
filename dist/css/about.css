@@ -91,7 +91,8 @@ section#events {
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  overflow: hidden; }
   section#events div#time-line {
     position: relative;
     width: 5px;
@@ -102,7 +103,9 @@ section#events {
       margin: 20px 0px;
       position: relative;
       background: #4d4d4d;
-      color: #fff; }
+      color: #fff;
+      transition: all 0.5s ease-in-out;
+      visibility: hidden; }
       section#events div#time-line div a {
         color: #FFC100; }
         section#events div#time-line div a:hover {
@@ -133,3 +136,24 @@ section#events {
       margin-bottom: 10px;
       text-align: center;
       font-size: 1.6rem; }
+    section#events div#time-line div.box-enter {
+      animation-timing-function: ease-in-out;
+      animation-duration: 0.7s;
+      animation-fill-mode: forwards;
+      visibility: visible; }
+    section#events div#time-line div.box-enter:nth-child(odd) {
+      animation-name: boxEnterOdd; }
+    section#events div#time-line div.box-enter:nth-child(even) {
+      animation-name: boxEnterEven; }
+
+@keyframes boxEnterOdd {
+  from {
+    -webkit-transform: translateX(-640px);
+    -ms-transform: translateX(-640px);
+    transform: translateX(-640px); } }
+
+@keyframes boxEnterEven {
+  from {
+    -webkit-transform: translateX(240px);
+    -ms-transform: translateX(240px);
+    transform: translateX(240px); } }

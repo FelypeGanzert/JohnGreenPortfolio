@@ -56,6 +56,7 @@ section#events{
     @include display-flex();
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
     div#time-line{
         position: relative;
         width: 5px;
@@ -67,6 +68,8 @@ section#events{
             position: relative;
             background: lighten($dark-color, 10%);
             color: $light-color;
+            transition: all 0.5s ease-in-out;
+            visibility: hidden;
             a{
                 color: $primary-color;
                 &:hover{
@@ -102,5 +105,32 @@ section#events{
             text-align: center;
             font-size: 1.6rem;
         }
+
+        div.box-enter{
+            animation-timing-function: ease-in-out;
+            animation-duration: 0.7s;
+            animation-fill-mode: forwards;
+            visibility: visible;
+        }
+        div.box-enter:nth-child(odd){
+            animation-name: boxEnterOdd;
+        }
+        div.box-enter:nth-child(even) {
+            animation-name: boxEnterEven;
+        }
+
+        @keyframes boxEnterOdd {
+            from{
+                @include transform(translateX(-640px));
+            }
+        }
+        
+        @keyframes boxEnterEven {
+            from{
+                @include transform(translateX(240px));
+            }
+        }
+        
+
     }
 }
